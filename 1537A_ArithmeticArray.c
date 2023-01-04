@@ -1,6 +1,3 @@
-//1537A
-//ArithmeticArray
-
 #include<stdio.h>
 
 int main()
