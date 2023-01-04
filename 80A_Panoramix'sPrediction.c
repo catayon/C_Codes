@@ -1,6 +1,3 @@
-//80A
-//Panoramix's Prediction
-
 #include<stdio.h>
 
 int main()
