@@ -1,6 +1,3 @@
-//1692A
-//Marathon
-
 #include<stdio.h>
 
 int main()
