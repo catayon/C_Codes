@@ -1,6 +1,3 @@
-//Polycarp's Pockets
-//07.01.2023
-
 #include<iostream>
 using namespace std;
 int main()
