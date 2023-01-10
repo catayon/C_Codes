@@ -1,9 +1,10 @@
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 int main()
 { 
-    int na,nb,p=0,q=0,c,cnta=0,cntb=0;
+    int na,nb,c;
+    int p=0,q=0,cnta=0,cntb=0;
     cin>>na;
     int a[na];
     for (int i = 0; i < na; i++)
@@ -21,7 +22,7 @@ int main()
         for (int j = 0; j < nb; j++)
         {
             c=a[i]+b[j];
-            
+            cnta=0,cntb=0;
             for (int k = 0; k < na; k++)
             {
                 if (c!=a[k])
@@ -41,8 +42,8 @@ int main()
                 p=a[i];
                 q=b[j];
                 break;
-            }   
-        }    
+            }
+        }
     }
     cout<<p<<" "<<q<<endl;
     return 0;
