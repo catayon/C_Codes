@@ -1,19 +1,23 @@
-#include<stdio.h>
-#include<string.h>
-
+#include <bits/stdc++.h>
+using namespace std;
 int main()
-{ 
-    int n,t,count[30];
-    scanf("%d", &n);
+{  
+    int n;
+    cin>>n;
+
     for (int i = 0; i < n; i++)
     {
-        scanf("%d", &t);
+        int t;
+        cin>>t;
+
         int no=0,yes=1;
         char s[1000];
         int count[30]={0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0};
+        
         for (int j = 0; j < t; j++)
         {
-            scanf("%s", &s);
+            cin>>s;
+
             int len=strlen(s);
             for (int z = 0; z < 26; z++)
             {
@@ -26,6 +30,7 @@ int main()
                 }
             }
         }
+
         for (int z = 0; z < 26; z++)
         {
             if (count[z]%t==0)
@@ -38,14 +43,16 @@ int main()
                 break;
             }   
         }
+        
         if (no==1)
         {
-            printf("NO\n");
+            cout<<"NO"<<endl;
         }
         else if (yes>=1)
         {
-            printf("YES\n");
+            cout<<"YES"<<endl;
         }
     }
+
     return 0;
 }
