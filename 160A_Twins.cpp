@@ -13,20 +13,20 @@ int main()
 
     sort(a, a + n);
 
-    int you_have = 0, twin_has = total, coinstaken = 0;
-    
+    int you_have = 0, twin_has = total, coins_taken = 0;
+
     for (int i = n - 1; i >= 0; i--)
     {
         you_have = you_have + a[i];
         twin_has = twin_has - a[i];
-        coinstaken++;
+        coins_taken++;
         if (you_have > twin_has)
         {
             break;
         }
     }
 
-    cout << coinstaken;
+    cout << coins_taken;
 
     return 0;
 }
