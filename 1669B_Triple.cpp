@@ -1,37 +1,31 @@
 #include <bits/stdc++.h>
 using namespace std;
-
 int main()
-{ 
+{
     int t;
-    int cnta=0;
-    int cntb=0;
-    int n;
-    int max;
-    cin>>t;
-    for (int i = 0; i < t; i++)
+    cin >> t;
+    while (t--)
     {
-        cin>>n;
-        cntb=0;
+        int n, max = -1;
+        cin >> n;
         int a[n];
         for (int j = 0; j < n; j++)
         {
-            cin>>a[j];
+            cin >> a[j];
         }
         sort(a, a + n);
-        for (int j = n; j > 0; j--)
+        for (int j = n - 1; j >= 2; j--)
         {
-            if (a[j-1]==a[j] && a[j-2]==a[j])
+            if (a[j - 1] == a[j] && a[j - 2] == a[j])
             {
-                max=a[j];
+                max = a[j];
                 break;
             }
-            else
-            {
-                max=-1;
-            }
         }
-        cout<<max<<endl;  
+        if (n < 3)
+            cout << (-1) << endl;
+        else
+            cout << max << endl;
     }
     return 0;
 }
